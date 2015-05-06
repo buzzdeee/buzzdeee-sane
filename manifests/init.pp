@@ -35,7 +35,26 @@
 #
 # Copyright 2015 Your name here, unless otherwise noted.
 #
-class sane {
+class sane (
+  $packages = $::sane::params::packages,
+  $service_name = $::sane::params::service,
+  $enable_hpaio = $::sane::params::enable_hpaio,
+) inherits sane::params {
 
 
+  class { 'sane::install':
+    packages => $packages,
+  }
+
+  class { 'sane::config':
+    enable_hpaio => $enable_hpaio,
+  }
+
+  class { 'sane::service':
+    service_name => $service_name,
+  }
+
+  Class['sane::install'] ->
+  Class['sane::config'] ~>
+  Class['sane::service']
 }
