@@ -1,0 +1,7 @@
+# private class, do not use directly
+# the parameters that steer this module
+class sane::params {
+  $packages = [ 'sane', 'sane-backends', 'hpaio', 'hplip-common' ]
+  $service_name = 'saned'
+  $enable_hpaio = true
+}
