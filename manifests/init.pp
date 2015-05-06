@@ -37,7 +37,7 @@
 #
 class sane (
   $packages = $::sane::params::packages,
-  $service_name = $::sane::params::service,
+  $service_name = $::sane::params::service_name,
   $enable_hpaio = $::sane::params::enable_hpaio,
 ) inherits sane::params {
 
