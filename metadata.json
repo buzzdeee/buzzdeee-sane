@@ -1,0 +1,14 @@
+{
+  "name": "buzzdeee-sane",
+  "version": "0.1.0",
+  "author": "Sebastian Reitenbach",
+  "summary": "A module to manage sane scanner software",
+  "license": "Apache-2.0",
+  "source": "https://github.com/buzzdeee/buzzdeee-sane.git",
+  "project_page": "https://github.com/buzzdeee/buzzdeee-sane",
+  "issues_url": "https://github.com/buzzdeee/buzzdeee-sane/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
